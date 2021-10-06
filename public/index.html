@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄罗斯方块</title>
+    <style>
+        #root {
+            display: flex;
+            justify-content: center;
+        }
+
+        #panel {
+            background-color: #000;
+            position: relative;
+        }
+        #msg{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            z-index: 10;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+        .msg-text{
+            color: #fff;
+            border: 2px solid #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: sandybrown;
+        }
+        #next{
+            position: relative;
+        }
+        #score{
+            font-size: 4em;
+            font-weight: bold;
+            text-align: center;
+        }
+        #operation{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div id="panel">
+            <div id="msg">
+                <p class="msg-text">游戏暂停</p>
+            </div>
+        </div>
+        <div id="tip">
+            <div id="next"></div>
+            <div id="score"></div>
+            <div id="operation">
+                <p>空格：开始/暂停</p>
+                <p>↑：方块变形</p>
+                <p>←：向左移动</p>
+                <p>→：向右移动</p>
+                <p>↓：向下移动</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
